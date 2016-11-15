@@ -20,4 +20,10 @@ void main()
 	}
 	else { cout << a.BunnyEars(bun) << endl; }
 
+	LinkedList b;
+	for (int i = 0; i < 10; i++)
+	{
+		b.insert(i, i);
+	}
+	cout << b.CountElements();
 }

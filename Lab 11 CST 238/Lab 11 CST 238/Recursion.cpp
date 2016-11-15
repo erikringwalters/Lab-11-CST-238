@@ -25,4 +25,5 @@ int Recursion::BunnyEars(int bunnies)
 		bunnies--;
 		return sum + BunnyEars(bunnies);
 	}
+	
 }

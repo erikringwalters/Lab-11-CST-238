@@ -8,8 +8,8 @@ void main()
 	cout << a.DigitSum(number) << endl;
 	//cout << (1024 / 10) << endl << (1024 % 10) << endl; 
 	int bun;
-	cout << "Enter number of bunnies! \n";
+	cout << "Enter number of bunnies: \n";
 	cin >> bun;
-	cout <<	a.BunnyEars(bun);
+	cout <<	a.BunnyEars(bun) << endl;
 
 }

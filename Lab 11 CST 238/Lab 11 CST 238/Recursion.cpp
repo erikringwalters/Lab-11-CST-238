@@ -15,14 +15,18 @@ int Recursion::DigitSum(int n)
 }
 int Recursion::BunnyEars(int bunnies)
 {
+	int sum = 2;
+	if (bunnies == 0)//base case
+	{
+		return bunnies;
+	}
 	if (bunnies < 0)
 	{
 		cerr << "Number of bunnies must be positive.\n";//error case
 		return 0;
 	}
-	if (bunnies == 0);//base case
-	{
-		return 0;
+	else {
+		bunnies--;
+		return sum + BunnyEars(bunnies);
 	}
-	return BunnyEars(bunnies - 1) + 2;
 }

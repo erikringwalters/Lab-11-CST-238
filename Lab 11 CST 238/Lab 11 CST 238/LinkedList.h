@@ -41,6 +41,8 @@ private:
 			: data(dataValue), next(NULL)
 		{ }
 	};
+	int LinkedList::ListSum(Node *ptr);
+	
 	Node * first;
 	int mySize;
 };

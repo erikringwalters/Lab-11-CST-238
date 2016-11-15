@@ -114,16 +114,18 @@ void LinkedList::display(ostream & out) const
 		ptr = ptr->next;
 	}
 }
-
 int LinkedList::CountElements()
 {
+	return ListSum(first);
+}
+int LinkedList::ListSum(Node * ptr)
+{
 	int sum = 0;
-	Node * ptr = first;
-	if (ptr == NULL)
+	if (ptr == NULL)//base case
 	{
 		return 0;
 	}
+	sum += ptr->data;
 	ptr = ptr->next;
-	sum++;
 	return CountElements() + sum;
 }

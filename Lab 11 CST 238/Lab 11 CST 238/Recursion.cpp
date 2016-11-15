@@ -1,15 +1,28 @@
 #include "Recursion.h"
-int DigitSum(int n)
+int Recursion::DigitSum(int n)
 {
 	if (n < 0)
 	{
-		cout << "Number must be positive. \n";
+		cerr << "Number must be positive. \n";//error case
 		return 0;
 	}
-	if (n < 10)
+	if (n < 10)//base case
 	{
 		return n;
 	}
 	int rightmost = n % 10;
-	return DigitSum(n / 10 + rightmost);
+	return DigitSum((n / 10)) + rightmost;
+}
+int Recursion::BunnyEars(int bunnies)
+{
+	if (bunnies < 0)
+	{
+		cerr << "Number of bunnies must be positive.\n";//error case
+		return 0;
+	}
+	if (bunnies == 0);//base case
+	{
+		return 0;
+	}
+	return BunnyEars(bunnies - 1) + 2;
 }

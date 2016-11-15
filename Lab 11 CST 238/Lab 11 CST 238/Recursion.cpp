@@ -20,11 +20,7 @@ int Recursion::BunnyEars(int bunnies)
 	{
 		return bunnies;
 	}
-	if (bunnies < 0)
-	{
-		cerr << "Number of bunnies must be positive.\n";//error case
-		return 0;
-	}
+	
 	else {
 		bunnies--;
 		return sum + BunnyEars(bunnies);

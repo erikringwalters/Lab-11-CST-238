@@ -126,6 +126,6 @@ int LinkedList::ListSum(Node * ptr)
 		return 0;
 	}
 	sum += ptr->data;
-	ptr = ptr->next;
-	return CountElements() + sum;
+	
+	return ListSum(ptr->next) + sum;
 }
